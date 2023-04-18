@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application' // 이 줄을 추가하세요.
+}
+
+group 'relation_mapping_basic'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:5.4.32.Final'
+    implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+    implementation 'com.h2database:h2:2.1.214'
+
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'relation_mapping_basic.Main' // 프로젝트의 main 클래스를 지정하세요.
+}

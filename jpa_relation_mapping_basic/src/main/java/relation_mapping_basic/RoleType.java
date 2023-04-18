@@ -1,2 +1,4 @@
-package relation_mapping_basic;public enum RoleType {
+package relation_mapping_basic;
+
+public enum RoleType {
 }
